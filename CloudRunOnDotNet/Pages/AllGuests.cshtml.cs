@@ -7,7 +7,7 @@ namespace CloudRunOnDotNet.Pages
 {
     public class AllGuests : PageModel
     {
-        private FirestoreDb db = FirestoreDb.Create("");
+        private FirestoreDb db = FirestoreDb.Create("PROJECT-ID-HERE");
         
         public IReadOnlyList<DocumentSnapshot> GuestBookQuerySnapshot { get; set; }
         

@@ -9,7 +9,7 @@ namespace CloudRunOnDotNet.Pages
     [IgnoreAntiforgeryToken(Order = 1001)]
     public class IndexModel : PageModel
     {
-        private FirestoreDb db = FirestoreDb.Create("");
+        private FirestoreDb db = FirestoreDb.Create("PROJECT-ID-HERE");
 
         public void OnGet()
         {
