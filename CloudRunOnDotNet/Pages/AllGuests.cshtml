@@ -1,0 +1,33 @@
+@page
+@model AllGuests
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>All Guests</title>
+</head>
+<body>
+<div>
+    <h1>All the guests</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Message</th>
+        </tr>
+        </thead>
+        <tbody>
+           @foreach (var document in Model.GuestBookQuerySnapshot)
+           {
+               var docDic = document.ToDictionary();
+               <tr>
+                   <td>@docDic["FullName"]</td>
+                   <td>@docDic["Message"]</td>
+               </tr>
+           }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

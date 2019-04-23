@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, Cloud run on .NET Core with Cloud Firestore</h1>
+    <p>Sign the guest book and let people know you were here.  See who else <a asp-page="AllGuests">signed</a>!</p>
+</div>
+
+<div class="text-center">
+    <form action="/" method="post">
+        <input name="FullName" placeholder="Your Name" required=""/><br /><br />
+        <textarea name="Message" rows="4" cols="20" required=""> </textarea><br />
+        <button>Sign Guess Book</button>
+    </form>
+</div>
